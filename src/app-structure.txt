@@ -1,0 +1,15 @@
+● src
++---● app
+|   +--● abisoft-personas
+|   |  |--abisoft-personas.component.ts|.html
+|   |  |
+|   |  +--● abisoft-persona-form
+|   |     |--abisoft-personas-form.component.ts|.html
+|   |
+|   +--● shared
+|   |  |--abisoft-persona.service.ts
+|   |  |--abisoft-persona.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
