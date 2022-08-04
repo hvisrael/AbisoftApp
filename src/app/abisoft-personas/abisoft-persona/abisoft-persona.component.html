@@ -8,27 +8,34 @@
         name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" 
         required [class.invalid]="fullName.invalid && fullName.touched" minlength="4" maxlength="50">
     </div>
-    <div class="form-group">
+    <div class="form row">
+
+        <div class="form-group  col-md-6">
+            <label>Fecha de Nacimiento</label>
+            <input  class="form-control form-control-lg" placeholder="MM/DD/YYYY" 
+            name="DOB" #DOB="ngModel" [(ngModel)]="service.formData.dob" required maxlength="10" type="date">
+        </div> 
+    <div class="form-group  col-md-6">
         <label>Edad </label>
         <input  class="form-control form-control-lg" placeholder="Edad" 
-        name="age" #Age="ngModel" [(ngModel)]="service.formData.age" required [class.invalid]="Age.invalid && Age.touched" maxlength="2">
+        name="age" #Age="ngModel" [(ngModel)]="service.formData.age"  (click)="CalculateAge()"
+        required [class.invalid]="Age.invalid && Age.touched" maxlength="2" type="number">
     </div>
-    <div class="form-group">
-        <label>Fecha de Nacimiento</label>
-        <input  class="form-control form-control-lg" placeholder="DD/MM/YYYY" 
-        name="DOB" #DOB="ngModel" [(ngModel)]="service.formData.dob" required maxlength="10">
-    </div>
+
+  
+</div>
     <div class="form row">
         <div class="form-group col-md-6">
             <label>Fecha de Inscripción </label>
-            <input  class="form-control form-control-lg" placeholder="DD/MM/YYYY" 
-            name="InscriptionDate" #InscriptionDate="ngModel" [(ngModel)]="service.formData.inscriptionDate" required maxlength="10">
+            <input  class="form-control form-control-lg" placeholder="MM/DD/YYYY" 
+            name="InscriptionDate" #InscriptionDate="ngModel" [(ngModel)]="service.formData.inscriptionDate" 
+            required maxlength="10" type="date">
         </div>
     
         <div class="form-group col-md-6">
             <label>Costo </label>
             <input  class="form-control form-control-lg" placeholder="$" 
-            name="Cost" #Cost="ngModel" [(ngModel)]="service.formData.cost" required>
+            name="Cost" #Cost="ngModel" [(ngModel)]="service.formData.cost" (click)="CalculateCosto()" required>
         </div>
     </div>
     <div class="form group">
